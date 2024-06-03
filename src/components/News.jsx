@@ -13,7 +13,7 @@ export default function News(props) {
   const fetchData = async (pageNumber) => {
     try {
       props.setProgress(20);
-      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${props.apiKey}&page=${pageNumber}&pageSize=${props.pageSize}&category=${props.category}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
       setLoader(true);
       let data = await fetch(url);
       props.setProgress(40);
